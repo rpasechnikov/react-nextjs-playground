@@ -1,0 +1,26 @@
+$navItemPadding: 0.5rem 2rem;
+
+.nav {
+  background-color: #555;
+  color: #fff;
+  min-width: 10rem;
+  height: 100vh;
+
+  padding-top: 1rem;
+}
+
+.headerItem {
+  padding: $navItemPadding;
+
+  &:hover {
+  }
+}
+
+.linkItem {
+  display: block;
+  padding: $navItemPadding;
+
+  &:hover {
+    background-color: #777;
+  }
+}
