@@ -10,18 +10,20 @@ const Heading: React.FC<HeadingProps> = (props) => {
 
   if (size === "large") {
     return (
-      <h1 className="text-3xl font-semibold text-center capitalize">
+      <h1 className="text-3xl font-semibold text-center uppercase">
         {children}
       </h1>
     );
   }
 
   if (size === "medium") {
-    return <h2 className="text-xl font-medium text-center">{children}</h2>;
+    return (
+      <h2 className="text-xl font-medium text-center capitalize">{children}</h2>
+    );
   }
 
   if (size === "small") {
-    return <h3 className="text-lg text-center">{children}</h3>;
+    return <h3 className="text-lg text-center capitalize">{children}</h3>;
   }
 
   return <>{children}</>;
