@@ -1,5 +1,11 @@
+import Heading from "../components/heading";
+
 const DashboardPage = () => {
-  return <div>Dashboard page</div>;
+  return (
+    <div>
+      <Heading size="large">Dashboard</Heading>
+    </div>
+  );
 };
 
 export default DashboardPage;

@@ -6,6 +6,7 @@ const useNavigation = () => {
     { type: "header", content: "React Online Store" },
     { type: "link", name: "Home", href: "/" },
     { type: "link", name: "Dashboard", href: "/dashboard" },
+    { type: "link", name: "Pages", href: "/pages" },
     { type: "link", name: "Products", href: "/products" },
   ]);
 
