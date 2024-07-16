@@ -6,21 +6,28 @@ import HeaderItem from "./header-item";
 import LinkItem from "./link-item";
 
 import styles from "./styles.module.scss";
-import NavItem from "./nav-item";
+import NavItemComponent from "./nav-item";
+import { NavItem } from "@/app/types";
 
 const Navbar = () => {
   const navItems = useNavigation();
 
-  <Link href="/dashboard">Dashboard</Link>;
+  const getNavItem = (index: number, navItem: NavItem) => {
+    return (
+      <NavItemComponent key={index}>
+        {(navItem.type === "header" && <HeaderItem {...navItem} />) ||
+          (navItem.type === "link" && <LinkItem {...navItem} />)}
+      </NavItemComponent>
+    );
+  };
+
   return (
-    <ul className={styles.nav}>
-      {navItems.map((navItem) => (
-        <NavItem>
-          {(navItem.type === "header" && <HeaderItem {...navItem} />) ||
-            (navItem.type === "link" && <LinkItem {...navItem} />)}
-        </NavItem>
-      ))}
-    </ul>
+    <>
+      <Link href="/dashboard">Dashboard</Link>;
+      <ul className={styles.nav}>
+        {navItems.map((navItem, index) => getNavItem(index, navItem))}
+      </ul>
+    </>
   );
 };
 

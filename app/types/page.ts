@@ -1,3 +1,5 @@
+export type NewPage = Omit<Page, "id">;
+
 export type Page = {
   id: string;
   title: string;
