@@ -2,23 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `npm run dev`
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Learn More
 
@@ -39,6 +24,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ### Tailwind CSS
 
+https://tailwindcss.com/docs
+
 ### Zustand State Management
 
 https://docs.pmnd.rs/zustand/getting-started/introduction
@@ -46,3 +33,16 @@ https://docs.pmnd.rs/zustand/getting-started/introduction
 ### Ant Design UX library
 
 https://ant.design/components/button
+
+### PostgreSQL DB
+
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+### Prisma ORM
+
+Object Relational Mapping tool for PostgreSQL, similar to what Entity Framework is in .NET for SQL Express and LocalDB.
+
+https://www.prisma.io/
+
+- `.env` is the PostgreSQL config file
+- `/prisma` contains migrations and the current schema. To create a new migration, after updating the `schema.prisma`, run the `npx prisma migrate dev --name init` command in the root of this project
