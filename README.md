@@ -2,8 +2,27 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+### Running the project
+
 - `npm run dev`
 - Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Creating the DB
+
+To create a new DB with Prisma ORM, based on `schema.prisma` and `.env` config
+
+- `npx prisma migrate dev --name init`
+
+### Seeding the DB
+
+To seed the DB, removing any and all data and re-creating only the data in `prisma/seed.ts`
+
+- `npm run seed`
+
+### To view the DB schema / data either:
+
+- Use `pgAdmin 4` application that comes with PostgreSQL installattion
+- Use the `npx prisma studio` to use the web-based DB client
 
 ## Learn More
 
@@ -42,7 +61,4 @@ https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 
 Object Relational Mapping tool for PostgreSQL, similar to what Entity Framework is in .NET for SQL Express and LocalDB.
 
-https://www.prisma.io/
-
-- `.env` is the PostgreSQL config file
-- `/prisma` contains migrations and the current schema. To create a new migration, after updating the `schema.prisma`, run the `npx prisma migrate dev --name init` command in the root of this project
+https://www.prisma.io/docs/getting-started/quickstart

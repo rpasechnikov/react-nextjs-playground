@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "npx prisma db push --force-reset && npx tsx prisma/seed.ts"
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.0",
@@ -29,6 +30,7 @@
     "prisma": "^5.17.0",
     "sass": "^1.77.8",
     "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
