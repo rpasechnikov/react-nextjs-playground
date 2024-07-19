@@ -7,6 +7,10 @@ interface PageState {
   addPage: (newPage: NewPage) => void;
 }
 
+/**
+ * DEPRECATED IN FAVOUR OF USING PRISMA DIRECTLY FROM SERVER COMPONENTS
+ * KEPT AS AN EXAMPLE ONLY
+ */
 const usePageStore = create<PageState>()((set) => ({
   pages: [],
   addPage: (newPage) =>

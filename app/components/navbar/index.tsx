@@ -23,7 +23,6 @@ const Navbar = () => {
 
   return (
     <>
-      <Link href="/dashboard">Dashboard</Link>;
       <ul className={styles.nav}>
         {navItems.map((navItem, index) => getNavItem(index, navItem))}
       </ul>
