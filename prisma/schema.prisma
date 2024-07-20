@@ -17,4 +17,15 @@ model Page {
   id Int @id @default(autoincrement())
   title String
   description String?
+  pageSections PageSection[]
+}
+
+model PageSection {
+  id Int @id @default(autoincrement())
+
+  page Page @relation(fields: [pageId], references: [id])
+  pageId Int
+
+  heading String
+  content String
 }
