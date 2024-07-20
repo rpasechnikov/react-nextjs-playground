@@ -4,7 +4,7 @@ import PageContent from "../components/page-content";
 import PageActions from "../components/page-actions";
 import NewPageButton from "./new-page-button";
 
-import prisma from "@lib/prisma";
+import db from "@/lib/db";
 
 type TableColumn = {
   title: string;
@@ -13,7 +13,7 @@ type TableColumn = {
 };
 
 const PagePage = async () => {
-  const pages = await prisma.page.findMany();
+  const pages = await db.page.findMany();
 
   const columns: TableColumn[] = [
     { dataIndex: "title", key: "title", title: "Page title" },

@@ -9,7 +9,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### Creating the DB
 
-To create a new DB with Prisma ORM, based on `schema.prisma` and `.env` config
+To create a new DB with Prisma ORM, based on `schema.prisma` and `.env` config.
 
 - `npx prisma migrate dev --name init`
 
@@ -18,6 +18,12 @@ To create a new DB with Prisma ORM, based on `schema.prisma` and `.env` config
 To seed the DB, removing any and all data and re-creating only the data in `prisma/seed.ts`
 
 - `npm run seed`
+
+### Creating new Prisma DB migrations
+
+This is the command that needs to be executed to create a new migration, AFTER the db schema in `schema.prisma` is updated.
+
+- `npx prisma migrate dev --name <name-of-the-migration>`
 
 ### To view the DB schema / data either:
 
