@@ -11,10 +11,18 @@ const NewPagePage = () => {
   const pageState = usePageStore();
   const router = useRouter();
 
-  const onFinish: FormProps<NewPage>["onFinish"] = (values) => {
-    console.log("Success:", values);
-    pageState.addPage({ ...values });
-    router.push("/pages");
+  const onFinish: FormProps<NewPage>["onFinish"] = async (values) => {
+    const response = await fetch("/api/pages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(values),
+    });
+
+    if (response.ok) {
+      router.push("/pages");
+    } else {
+      console.log(">>> Failed to create a page due to: ", response.statusText);
+    }
   };
 
   const onFinishFailed: FormProps<NewPage>["onFinishFailed"] = (errorInfo) => {
